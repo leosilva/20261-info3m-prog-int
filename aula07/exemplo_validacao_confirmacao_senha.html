@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Validação confirmação de senha</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script>
+			function validar() {
+				let senha = $('input[name="senha"]')
+				let confirmacao = $('input[name="confirmacao_senha"]')
+
+				// Compara os valores
+				if (senha.val() !== confirmacao.val()) {
+					alert("As senhas não conferem! Por favor digite-as novamente!")
+					// Limpa os campos de senha
+					senha.val('');
+					confirmacao.val(''); 
+
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" name="cadastro" onsubmit="return validar()">
+			Senha: <input name="senha" type="password" /><br/>
+			Confirmação de senha: <input name="confirmacao_senha" type="password" />
+			<input name="enviar" type="submit" value="Enviar" />
+		</form>
+	</body>
+</html>

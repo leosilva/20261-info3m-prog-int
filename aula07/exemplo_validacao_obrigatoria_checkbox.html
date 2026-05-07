@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Validação de seleção obrigatória (checkbox)</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			function validar() {
+				// Verifica se a checkbox 'termos' NÃO está marcada
+				if (!$('input[name="termos"]').is(':checked')) {
+					alert("Você precisa aceitar os termos para se cadastrar!")
+
+					return false
+				} 
+				return true
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" name="cadastro" onsubmit="return validar()">
+			Você concorda com os termos para cadastro?<br/>
+			<input type="checkbox" name="termos" value="sim" /> Sim <br/><br/>
+			<input name="enviar" type="submit" value="Enviar" />
+		</form>
+	</body>
+</html>

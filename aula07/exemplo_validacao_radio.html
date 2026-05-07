@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Validação de seleção obrigatória (radio)</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			function validar() {
+				// O seletor :checked verifica se existe algum radio selecionado no grupo 
+                // Quando o usuario seleciona um radio button, o length retorna 1
+                // fazendo a comparacao retornar true
+				let modalidadeSelecionada = $('input[name="modalidade"]:checked').length > 0
+                
+                // inverte o valor logico da variavel
+				if (!modalidadeSelecionada) {
+					alert("Selecione a modalidade do curso!")
+
+					return false
+				}
+				return true
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" name="cadastro" onsubmit="return validar()">
+			Qual é a modalidade do seu curso?<br/>
+			<input type="radio" name="modalidade" value="subsequente" /> Subsequente<br/>
+			<input type="radio" name="modalidade" value="integrado" /> Integrado<br/><br/>
+			<input name="enviar" type="submit" value="Enviar" />
+		</form>
+	</body>
+</html>

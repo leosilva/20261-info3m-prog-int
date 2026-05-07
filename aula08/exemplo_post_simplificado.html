@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo requisição POST com jQuery e Ajax</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // Executa o script somente depois que todos os elementos da página estiverem disponíveis.
+        $(document).ready(function() {
+            // Dispara a requisição quando o botão for clicado.
+            $("#btnEnviar").on("click", function() {
+                // Envia um POST simplificado com os dados definidos diretamente no código.
+                $.post("https://jsonplaceholder.typicode.com/posts", {
+                    title: "Teste",
+                    body: "Conteúdo",
+                    userId: 1
+                }, function(data) {
+                    // Mostra a resposta da API em formato de texto JSON.
+                    $("#resposta").html(JSON.stringify(data));
+                });
+            })
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="titulo" placeholder="Digite um título">
+    <textarea id="conteudo" placeholder="Digite o conteúdo"></textarea>
+    <button id="btnEnviar">Enviar</button>
+
+    <div id="resposta"></div>
+</body>
+</html>

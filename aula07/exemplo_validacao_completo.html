@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Nova Inscrição</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="exemplo_validacao_completo.js"></script>
+	</head>
+	<body>
+		<div class="container mt-5">
+			<h1>Nova Inscrição</h1>
+			<p class="text-muted font-italic text-right">Os campos marcados com asterisco (<span class="text-danger font-weight-bold">*</span>) são de preenchimento obrigatório</p>
+			<hr/>
+			<form id="formulario">
+			  <div class="form-group row">
+				<label for="nome" class="col-sm-2 col-form-label">Nome<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control obrigatorio" id="nome" name="nome" />
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="email" class="col-sm-2 col-form-label">E-mail<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control obrigatorio" id="email" name="email"/>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="cpf" class="col-sm-2 col-form-label">CPF<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="col-sm-4">
+				  <input type="text" class="form-control obrigatorio" id="cpf" name="cpf"/>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="identidade" class="col-sm-2 col-form-label">Identidade<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="col-sm-3" style="flex: 0 0 18.2%;">
+				  <input type="text" class="form-control obrigatorio" id="identidade" name="identidade" />
+				</div>
+				<label for="orgaoEmissor" class="col-sm-2 col-form-label" style="flex: 0 0 12.5%;">Órgão Emissor:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="orgaoEmissor" name="orgaoEmissor"/>
+				</div>
+				<p class="col-form-label">-</p>
+				<div class="col-sm-1">
+					<select id="selectEstado" class="custom-select" name="selectEstado">
+					</select>
+				</div>
+				<label for="dataExpedicao" class="col-sm-2 col-form-label" style="flex: 0 0 13%;">Data Expedição:</label>
+				<div class="col-sm-2" style="flex: 0 0 14%;">
+					<input type="text" class="form-control" id="dataExpedicao" name="dataExpedicao"/>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="dataNasc" class="col-sm-2 col-form-label">Data Nascimento<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="col-sm-2">
+				  <input type="text" class="form-control obrigatorio" id="dataNasc" name="dataNasc"/>
+				</div>
+				<label for="naturalidade" class="col-sm-2 col-form-label" style="flex: 0 0 12%;">Naturalidade:</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="naturalidade" name="naturalidade"/>
+				</div>
+				<p class="col-form-label">-</p>
+				<div class="col-sm-1">
+					<select id="selectNaturalidade" class="custom-select" name="selectNaturalidade">
+					</select>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="selectEstadoCivil" class="col-sm-2 col-form-label">Estado Civil:</label>
+				<div class="col-sm-3">
+					<select id="selectEstadoCivil" class="custom-select" name="selectEstadoCivil">
+						<option value=""></option>
+						<option value="solteiro">Solteiro(a)</option>
+						<option value="casado">Casado(a)</option>
+						<option value="divorciado">Divorciado(a)</option>
+						<option value="viuvo">Viúvo(a)</option>
+					</select>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="nomeMae" class="col-sm-2 col-form-label">Nome da Mãe<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control obrigatorio" id="nomeMae" name="nomeMae"/>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="sexoMasc" class="col-sm-2 col-form-label">Sexo<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="custom-control custom-radio ml-3">
+	                <input type="radio" class="custom-control-input" id="sexoMasc" name="sexo" value="masculino"/>
+	                <label class="custom-control-label mr-2" for="sexoMasc">Masculino</label>
+				</div>
+				<div class="custom-control custom-radio">
+	                <input type="radio" class="custom-control-input" id="sexoFem" name="sexo" value="feminino"/>
+	                <label class="custom-control-label" for="sexoFem">Feminino</label>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="linguaEstrangeira" class="col-sm-2 col-form-label">Língua Estrangeira<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="custom-control custom-radio ml-3">
+	                <input type="radio" class="custom-control-input" id="linguaEstrangeiraIngles" name="linguaEstrangeira" value="ingles"/>
+	                <label class="custom-control-label mr-2" for="linguaEstrangeiraIngles">Inglês</label>
+				</div>
+				<div class="custom-control custom-radio">
+	                <input type="radio" class="custom-control-input" id="linguaEstrangeiraEspanhol" name="linguaEstrangeira" value="espanhol"/>
+	                <label class="custom-control-label" for="linguaEstrangeiraEspanhol">Espanhol</label>
+				</div>
+			  </div>
+			  <div class="form-group row col-sm-8 float-left">
+				<label for="telefone" class="col-sm-4 col-form-label">Telefones<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="form-group row w-50" id="divTelefones">
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label" for="ddd1">DDD:</label>
+			            <div class="col-sm-3">	
+			                <input type="text" class="form-control" id="ddd1" name="ddd1"/>
+						</div>
+						<label class="col-sm-3 col-form-label" for="numero1">Número:</label>
+			            <div class="col-sm-4">
+			                <input type="text" class="form-control" id="numero1" name="numero1"/>
+						</div>
+					</div>
+				</div>
+			  </div>
+			  <div class="form-group row col-sm-2">
+					<button type="button" class="btn btn-secondary" id="botaoAdicionarTelefone">Adicionar</button>
+				</div>
+			  <div class="form-group row">
+				<label for="pagamento" class="col-sm-2 col-form-label">Pagamento<span class="text-danger font-weight-bold">*</span>:</label>
+				<div class="custom-control custom-radio ml-3">
+	                <input type="radio" class="custom-control-input" id="pagamentoBoleto" name="pagamento" value="boleto"/>
+	                <label class="custom-control-label mr-2" for="pagamentoBoleto">Boleto</label>
+				</div>
+				<div class="custom-control custom-radio">
+	                <input type="radio" class="custom-control-input" id="pagamentoCartaoCredito" name="pagamento" value="credito"/>
+	                <label class="custom-control-label" for="pagamentoCartaoCredito">Cartão de Crédito</label>
+				</div>
+			  </div>
+			  <div class="form-group row d-none" id="divCartaoCredito">
+			  	<label class="col-sm-2 col-form-label"></label>
+			  	<div class="form-group row w-75">
+					<label for="tipoCartao" class="col-sm-3 col-form-label">Tipo<span class="text-danger font-weight-bold">*</span>:</label>
+					<div class="custom-control custom-radio ml-3">
+		                <input type="radio" class="custom-control-input" id="cartaoVisa" name="tipoCartao" value="visa"/>
+		                <label class="custom-control-label mr-2" for="cartaoVisa">Visa</label>
+					</div>
+					<div class="custom-control custom-radio">
+		                <input type="radio" class="custom-control-input" id="cartaoMaster" name="tipoCartao" value="mastercard"/>
+		                <label class="custom-control-label" for="cartaoMaster">MasterCard</label>
+					</div>
+				  </div>
+				<label class="col-sm-2 col-form-label"></label>
+				<div class="form-group row w-75">
+					<label class="col-sm-3 col-form-label" for="nomeCartao">Nome<span class="text-danger font-weight-bold">*</span>:</label>
+		            <div class="col-sm-9">	
+		                <input type="text" class="form-control obrigatorioCartao" id="nomeCartao" name="nomeCartao" />
+					</div>
+				</div>
+				<label class="col-sm-2 col-form-label"></label>
+				<div class="form-group row w-75">
+					<label class="col-sm-3 col-form-label" for="numeroCartao">Número<span class="text-danger font-weight-bold">*</span>:</label>
+		            <div class="col-sm-5">
+		                <input type="text" class="form-control obrigatorioCartao" id="numeroCartao" name="numeroCartao"/>
+					</div>
+				</div>
+				<label class="col-sm-2 col-form-label"></label>
+				<div class="form-group row w-75">
+					<label class="col-sm-3 col-form-label" for="dataVencimento">Data de Vencimento<span class="text-danger font-weight-bold">*</span>:</label>
+					<div class="col-sm-1">
+		                <input type="text" class="form-control obrigatorioCartao" id="mesDataVencimento" name="mesDataVencimento"/>
+					</div>
+					<p class="col-form-label">/</p>
+					<div class="col-sm-1">
+						<input type="text" class="form-control obrigatorioCartao" id="anoDataVencimento" name="anoDataVencimento"/>
+					</div>
+				</div>
+				<label class="col-sm-2 col-form-label"></label>
+				<div class="form-group row w-75">
+					<label class="col-sm-3 col-form-label" for="codigoSeguranca">Código de Segurança<span class="text-danger font-weight-bold">*</span>:</label>
+		            <div class="col-sm-2">
+		                <input type="text" class="form-control obrigatorioCartao" id="codigoSeguranca" name="codigoSeguranca"/>
+					</div>
+				</div>
+			  </div>
+			  <hr class="mb-4" />
+			  <button class="btn btn-light btn-lg" type="reset">Limpar</button>
+			  <button class="btn btn-primary btn-lg" type="submit">Salvar</button>
+			</form>
+		</div>
+	</body>
+</html>
