@@ -3,21 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Validação preenchimento obrigatório</title>
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 		<script type="text/javascript">
 			function validar() {
 				let nome = $('#nome').val()
+                
 				if (nome === "") {
 					alert("Por favor preencha o campo nome!")
 					return false
-				}
-				return true
+				} else {
+				    return true
+                }
 			}
 		</script>
 	</head>
 	<body>
 		<form action="" name="cadastro" onsubmit="return validar()">
-			<label for="nome">Nome: </label><input name="nome" type="text" id="nome" />
+			<label for="nome">Nome: </label>
+            <input name="nome" type="text" id="nome" />
 			<input name="enviar" type="submit" value="Enviar" />
 		</form>
 	</body>

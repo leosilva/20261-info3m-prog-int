@@ -10,7 +10,6 @@
 				let marcados = $('input[name="turnos"]:checked').length
 				if (marcados < 2) {
 					alert("Selecione pelo menos dois turnos!"); 
-
 					return false
 				}
 				return true
@@ -23,6 +22,7 @@
 			<input type="checkbox" name="turnos" value="manha" /> Manhã<br/>
 			<input type="checkbox" name="turnos" value="tarde" /> Tarde<br/>
 			<input type="checkbox" name="turnos" value="noite" /> Noite<br/><br/>
+            <input type="date" name="data"/>
 			<input name="enviar" type="submit" value="Enviar" />
 		</form>
 	</body>
