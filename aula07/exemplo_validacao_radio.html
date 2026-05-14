@@ -3,21 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Validação de seleção obrigatória (radio)</title>
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 		<script type="text/javascript">
 			function validar() {
 				// O seletor :checked verifica se existe algum radio selecionado no grupo 
-                // Quando o usuario seleciona um radio button, o length retorna 1
-                // fazendo a comparacao retornar true
-				let modalidadeSelecionada = $('input[name="modalidade"]:checked').length > 0
+				let modalidadeSelecionada = $('input[name="modalidade"]:checked')
                 
-                // inverte o valor logico da variavel
-				if (!modalidadeSelecionada) {
+				if (modalidadeSelecionada.length > 0) {
+                    return true
+                } else {
 					alert("Selecione a modalidade do curso!")
-
 					return false
 				}
-				return true
 			}
 		</script>
 	</head>
